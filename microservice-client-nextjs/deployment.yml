@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microservice-client-nextjs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: microservice-client-nextjs
+  template:
+    metadata:
+      labels:
+        component: microservice-client-nextjs
+    spec:
+      serviceAccount: microservice-client-nextjs
+      containers:
+        - name: microservice-client-nextjs
+          image: registry.gitlab.com/oooodiva/microservice-client-nextjs:latest
+          ports:
+            - containerPort: 3000
