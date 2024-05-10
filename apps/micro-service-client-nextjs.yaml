@@ -11,4 +11,4 @@ spec:
     path: microservice-client-nextjs
   destination:
     server: https://kubernetes.default.svc
-    namespace: defalut
+    namespace: default
