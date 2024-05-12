@@ -6,7 +6,6 @@ metadata:
     app: nginx-app
     name: nginx
 spec:
-  type: NodePort
   ports:
     - name: nginx-port
       port: 80
